@@ -10,7 +10,35 @@ const LoginPage = () => {
             <h1 className="brand-title">Elegance Salon</h1>
             <p className="brand-subtitle">Professional Beauty Services Portal</p>
           </div>
-          <SignIn routing="hash" />
+          <SignIn 
+            routing="hash"
+            appearance={{
+              elements: {
+                formButtonPrimary: {
+                  backgroundColor: '#475569',
+                  '&:hover': {
+                    backgroundColor: '#334155'
+                  }
+                },
+                formFieldInput: {
+                  backgroundColor: '#f9fafb',
+                  borderColor: '#e5e7eb',
+                  '&:focus': {
+                    borderColor: '#475569',
+                    boxShadow: '0 0 0 3px rgba(71, 85, 105, 0.1)'
+                  }
+                },
+                headerTitle: {
+                  fontFamily: 'Playfair Display, serif',
+                  color: '#1f2937'
+                },
+                headerSubtitle: {
+                  fontFamily: 'Poppins, sans-serif',
+                  color: '#6b7280'
+                }
+              }
+            }}
+          />
         </div>
       </div>
       
