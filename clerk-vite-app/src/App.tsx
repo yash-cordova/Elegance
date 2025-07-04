@@ -4,14 +4,16 @@ import './styles/global.css';
 
 // Components
 import LogoutButton from './components/LogoutButton';
+import UserRoleDisplay from './components/UserRoleDisplay';
+import SetRoleButton from './components/SetRoleButton';
 
 // Pages
 import LoginPage from './pages/LoginPage';
 import WelcomePage from './pages/WelcomePage';
 
 function App() {
-  // Hardcoded Clerk publishable key
-  const publishableKey = 'pk_test_ZGVjaWRpbmctc3dpbmUtMjkuY2xlcmsuYWNjb3VudHMuZGV2JA';
+  // Use the environment variable
+  const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
   return (
     <ClerkProvider publishableKey={publishableKey}>
@@ -20,6 +22,8 @@ function App() {
           {/* Global Logout Options - Always visible when signed in */}
           <SignedIn>
             <LogoutButton />
+            <UserRoleDisplay />
+            <SetRoleButton />
           </SignedIn>
 
           <Routes>
