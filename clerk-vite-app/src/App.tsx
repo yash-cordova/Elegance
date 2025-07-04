@@ -5,7 +5,6 @@ import './styles/global.css';
 // Components
 import LogoutButton from './components/LogoutButton';
 import UserRoleDisplay from './components/UserRoleDisplay';
-import SetRoleButton from './components/SetRoleButton';
 
 // Pages
 import LoginPage from './pages/LoginPage';
@@ -23,7 +22,6 @@ function App() {
           <SignedIn>
             <LogoutButton />
             <UserRoleDisplay />
-            <SetRoleButton />
           </SignedIn>
 
           <Routes>

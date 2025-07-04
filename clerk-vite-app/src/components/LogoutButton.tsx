@@ -11,7 +11,10 @@ const LogoutButton = () => {
       gap: '1rem',
       zIndex: 1000
     }}>
-      <UserButton afterSignOutUrl='/' />
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <UserButton afterSignOutUrl='/' />
+        <span style={{ color: '#334155', fontWeight: 500, fontSize: '0.95rem', fontFamily: 'Poppins, sans-serif' }}>Profile</span>
+      </div>
       <SignOutButton>
         <button style={{
           background: 'linear-gradient(135deg, #475569 0%, #334155 100%)',
