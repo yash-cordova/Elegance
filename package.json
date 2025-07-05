@@ -1,0 +1,23 @@
+{
+  "name": "hair-salon-fullstack",
+  "version": "1.0.0",
+  "description": "Full-stack Hair Salon application with React frontend and Express backend",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd clerk-vite-app && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd clerk-vite-app && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd clerk-vite-app && npm run build",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd clerk-vite-app && npm run preview",
+    "start:backend": "cd backend && npm start",
+    "lint": "cd clerk-vite-app && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["react", "express", "fullstack", "hair-salon"],
+  "author": "",
+  "license": "ISC"
+} 
